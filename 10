@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="google-translate-customization" content="ba60c036ac133aff-11a3187215e55fd5-g5c97d0c2c087de4b-a">
+    <title>声優一覧（わ行） - 声優データベース</title><meta name="keywords" content=",声優,データベース,インデックス">
+<meta name="description" content="声優さんの50音順インデックスのわ行の一覧です。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/css/main.css" media="screen" rel="stylesheet" type="text/css">    
+    <!--[if lt IE 9]>
+        <script src="/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+    	<div class="container">
+    		<a href="/" rel="home" class="brand">
+    			<img src="/images/lain-logo.gif" alt=".lain" title=".lain" />
+    		</a>
+    		<div class="pull-right">
+                <form action="/search" class="navbar-search">
+                    <input type="hidden" name="cx" value="005528038068828159442:xutqcszfsvk" />
+                    <input type="hidden" name="cof" value="FORID:11" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <input type="text" name="q" id="q" class="search-query" placeholder="サイト内検索" />
+                </form>
+                <ul class="nav pull-right" id="loginFormWidget">
+    <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> ログイン <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li class="nav-header">.lainのIDでログイン</li>
+            <li>
+                <form action="/login" method="post" name="login-form-widget" class="form-stacked form-vertical" id="login-form-widget">
+
+<div class="control-group"><label class="control-label" for="uname">ユーザー名</label><div class="controls"><input type="text" name="uname" placeholder="ユーザー名" class="" id="uname" value=""></div></div>
+<div class="control-group"><label class="control-label" for="pass">パスワード</label><div class="controls"><input type="password" name="pass" placeholder="パスワード" id="pass" value=""></div></div>
+
+<input type="hidden" name="login_hash" value="4c20c58d2dcac6b0d5798c47f353c2bb">
+
+<input type="hidden" name="redirect" value="/voicedb/profile/list/cid/10"><div class="form-actions">
+<input type="submit" name="submit" class="btn btn-block" value="ログイン">
+</div></form>            </li>
+                        <li class="divider"></li>
+            <li><a href="/register">アカウント作成</a></li>
+            <li><a href="/user/lost-password">パスワード紛失</a></li>
+        </ul>
+            </li>
+</ul>            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="span3">
+                <nav id="main-navigation">
+        	<h2 class="menu-title">メインメニュー</h2>
+            <ul id="navigation">
+                                    <li>
+                        <a href="/" title="ホーム">ホーム</a>
+                                            </li>
+                                    <li id="navigationActive">
+                        <a href="/voicedb" title="声優データベース">声優データベース</a>
+                                                    <ul id="navigationParent">
+                                                                                                <li><a href="/voicedb/search" title="声優検索">声優検索</a></li>
+                                                                                                                                                                                                                                                                <li><a href="/voicedb/calendar/birthday" title="誕生日カレンダー">誕生日カレンダー</a></li>
+                                                                                                                                <li><a href="/voicedb/unit" title="声優ユニット">声優ユニット</a></li>
+                                                                                                                                <li><a href="/voicedb/company" title="声優プロダクション">声優プロダクション</a></li>
+                                                                                                                                <li><a href="/links/twitter/list/profile" title="声優Twitter">声優Twitter</a></li>
+                                                                                                                                <li><a href="/video/category/voice" title="声優動画">声優動画</a></li>
+                                                                                                                                <li><a href="/voicedb/trivia" title="声優トリビア">声優トリビア</a></li>
+                                                                                                                                <li><a href="/voicedb/individual/appearance" title="出演作品数検索">出演作品数検索</a></li>
+                                                                                                                                <li><a href="/voicedb/individual/costar-search" title="共演作品検索">共演作品検索</a></li>
+                                                                                                                                <li><a href="/voicedb/biography" title="声優年表">声優年表</a></li>
+                                                                                                                                <li><a href="/voicedb/individual" title="声優統計">声優統計</a></li>
+                                                                                                                                <li><a href="/voicedb/rank" title="ランキング">ランキング</a></li>
+                                                                                                                                <li><a href="/voicedb/tag" title="タグ">タグ</a></li>
+                                                                                                                                <li><a href="/voicedb/newrelease" title="ニューリリ－ス">ニューリリ－ス</a></li>
+                                                                                                                                <li><a href="/voicedb/update/waiting" title="承認待ち一覧">承認待ち一覧</a></li>
+                                                                                        </ul>
+                                            </li>
+                                    <li>
+                        <a href="/mediadb" title="アニメデータベース">アニメデータベース</a>
+                                            </li>
+                                    <li>
+                        <a href="/forum" title="フォーラム">フォーラム</a>
+                                            </li>
+                                    <li>
+                        <a href="/optical" title="声優・アニメCD">声優・アニメCD</a>
+                                            </li>
+                                    <li>
+                        <a href="/video" title="声優・アニメ動画">声優・アニメ動画</a>
+                                            </li>
+                                    <li>
+                        <a href="/place" title="プレイス">プレイス</a>
+                                            </li>
+                                    <li>
+                        <a href="/foto" title="foto">foto</a>
+                                            </li>
+                                    <li>
+                        <a href="/news" title="ニュース">ニュース</a>
+                                            </li>
+                                    <li>
+                        <a href="/links" title="リンク">リンク</a>
+                                            </li>
+                            </ul>
+        </nav>
+        <div class="center" id="sideBarAds">
+            <script type="text/javascript">
+            <!--
+            google_ad_client = "ca-pub-4473537299364066";
+            /* PCサイト_左下_メニュー下 */
+            google_ad_slot = "6509370660";
+            google_ad_width = 160;
+            google_ad_height = 600;
+            //-->
+            </script>
+            <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+        </div>
+    </div><!-- サイドメニュー終了 -->
+        <div class="span13">
+            
+<h1><a href="/voicedb">声優データベース</a></h1>
+
+
+<ul class="nav nav-pills">
+    <li><a href="/voicedb/search">声優検索</a></li>
+        <li><a href="/voicedb/calendar/birthday">誕生日カレンダー</a></li>
+    <li><a href="/voicedb/company">声優プロダクション</a></li>
+    <li><a href="/voicedb/individual">声優統計</a></li>
+</ul>
+
+<div id="talMenu">
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/1" title="あ行">あ行</a></div>
+    <div class="talLinkBottom">825</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/2" title="か行">か行</a></div>
+    <div class="talLinkBottom">645</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/3" title="さ行">さ行</a></div>
+    <div class="talLinkBottom">535</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/4" title="た行">た行</a></div>
+    <div class="talLinkBottom">486</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/5" title="な行">な行</a></div>
+    <div class="talLinkBottom">328</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/6" title="は行">は行</a></div>
+    <div class="talLinkBottom">472</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/7" title="ま行">ま行</a></div>
+    <div class="talLinkBottom">457</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/8" title="や行">や行</a></div>
+    <div class="talLinkBottom">274</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/9" title="ら行">ら行</a></div>
+    <div class="talLinkBottom">13</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/10" title="わ行">わ行</a></div>
+    <div class="talLinkBottom">44</div>
+</div>
+</div>
+<div id="db-anchorlink">
+<h1 class="listHeader1">わ行</h1>
+
+<ul class="mainList">
+	<li><a href="/voicedb/profile/list/cid/10#on1">わ</a></li>
+	<li><a href="/voicedb/profile/list/cid/10#on2">を</a></li>
+	<li><a href="/voicedb/profile/list/cid/10#on3">ん</a></li>
+</ul>
+</div>
+
+
+    <h2 class="listHeader2" id="on1">わ</h2>
+    <ul class="listItems">
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/3779" title="わかいずみえこ">若泉絵子</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/303/">E-sprinG</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/3794" title="わかいゆうき">若井友希</a> - <data value="2014-08-10T19:45:18+09:00">更新日 2014年08月10日</data>
+		<p><a href="/place/item/3/">81プロデュース</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/2996" title="わかなようこ">若菜よう子</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/117/">オフィス薫</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/1193" title="わかばやしなおみ">若林直美</a> - <data value="2014-08-09T02:47:54+09:00">更新日 2014年08月09日</data>
+		<p><a href="/place/item/213/">同人舎</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/2626" title="わかばやしひでとし">若林秀俊</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/457/">プロダクション・タンク</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/3479" title="わかばやしりょう">若林亮</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/512/">アクロス エンタテインメント</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/55" title="わかもとのりお">若本規夫</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/16/">シグマ・セブン</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/2371" title="わかやまげんぞう">若山弦藏</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/3174" title="わきともひろ">脇知弘</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/309/">ATプロダクション</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/1437" title="わくいえみ">和久井映見</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/244/">アルファエージェンシー</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/1266" title="わくいせつお">和久井節緒</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/32/">東京俳優生活協同組合</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/1354" title="わくさわりか">わくさわりか</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/82/">アクセント</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/1627" title="わくだみはる">和久田み晴</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/3/">81プロデュース</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/965" title="わしおまちこ">鷲尾真知子</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/65/">その他</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/118" title="わたなべあけの">渡辺明乃</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/31/">大沢事務所</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/3014" title="わたなべかつみ">渡辺克己</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/82/">アクセント</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/3684" title="わたなべきょうすけ">渡辺恭介</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/46" title="わたなべくみこ">渡辺久美子</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/4/">アーツビジョン</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/1104" title="わたなべけい">渡辺慶</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/2655" title="わたなべけいこ">渡部恵子</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/101/">クレイジーボックス</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/2375" title="わたなべこうじ">渡辺浩司</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/6/">ぷろだくしょんバオバブ</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/3535" title="わたなべたいち">渡邉太一</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/3061" title="わたなべたくみ">渡辺拓海</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/4/">アーツビジョン</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/3020" title="わたなべたけひこ">渡辺武彦</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/2/">青二プロダクション</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/2691" title="わたなべともひろ">渡辺友裕</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/2369" title="わたなべともみ">渡辺智美</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/16/">シグマ・セブン</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/120" title="わたなべなおこ">渡辺菜生子</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/2/">青二プロダクション</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/2084" title="わたなべひでお">渡辺英雄</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/116/">リベルタ</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/3365" title="わたなべひろし">渡辺紘</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/285/">プロ・フィット</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/1318" title="わたなべまい">渡辺舞</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/65/">その他</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/1357" title="わたなべまさこ">渡辺真砂子</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/80/">テアトル・エコー</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/3426" title="わたなべみく">渡辺未来</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/116" title="わたなべみさ">渡辺美佐</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/2/">青二プロダクション</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/3027" title="わたなべゆい">渡部優衣</a> - <data value="2014-10-01T19:36:50+09:00">更新日 2014年10月01日</data>
+		<p><a href="/place/item/491/">JTBエンタテインメント</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/119" title="わたなべゆき">渡邉由紀</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/1284" title="わたなべるみ">渡部るみ</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/115" title="わたべたけし">渡部猛</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/3/">81プロデュース</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/121" title="わたりひろし">渡洋史</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/65/">その他</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/2191" title="わだかよ">和田カヨ</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/65/">その他</a> 所属</p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/3814" title="わだしょう">和田省</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/117" title="わだみちる">和田みちる</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/4134" title="わだめぐみ">和田恵未</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+	<li>
+		<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  />		<a href="/voicedb/profile/1367" title="わらがいあさみ">藁谷麻美</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/1/">フリー</a></p>
+	</li>
+
+    </ul>
+    <div class="listFooter"><div class="backButton"><a href="#db-anchorlink">トップに戻る</a></div></div>
+    <h2 class="listHeader2" id="on2">を</h2>
+    <ul class="listItems">
+	<li>
+		<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  />		<a href="/voicedb/profile/2410" title="をわりまんぞう">をはり万造</a> - <data value="2014-07-09T22:32:35+09:00">更新日 2014年07月09日</data>
+		<p><a href="/place/item/610/">ベストポジション</a> 所属</p>
+	</li>
+</ul>
+
+<div class="listFooter">
+    <div class="backButton"><a href="#db-anchorlink">トップに戻る</a></div>
+</div>        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 1997 - 2014 .lain <a href="/">ホーム</a> - <a href="/contact">お問い合わせ</a> - <a href="/about">.lainについて</a> - <a href="/docs/api">api</a></p>
+    </footer>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/jquery/jquery-1.9.0.min.js"><\/script>')</script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var _gaq=[['_setAccount','UA-54052-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+    window.___gcfg = {lang: 'ja'};
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+</body>
+</html>

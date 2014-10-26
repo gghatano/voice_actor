@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="google-translate-customization" content="ba60c036ac133aff-11a3187215e55fd5-g5c97d0c2c087de4b-a">
+    <title>声優データベース - .lain</title><meta name="keywords" content="声優,声優データベース,プロフィール,出演作品,声優検索">
+<meta name="description" content="声優さんのプロフィールや出演作品などを50音別に探せます、名前での検索機能もあります。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/css/main.css" media="screen" rel="stylesheet" type="text/css">    
+    <!--[if lt IE 9]>
+        <script src="/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+    	<div class="container">
+    		<a href="/" rel="home" class="brand">
+    			<img src="/images/lain-logo.gif" alt=".lain" title=".lain" />
+    		</a>
+    		<div class="pull-right">
+                <form action="/search" class="navbar-search">
+                    <input type="hidden" name="cx" value="005528038068828159442:xutqcszfsvk" />
+                    <input type="hidden" name="cof" value="FORID:11" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <input type="text" name="q" id="q" class="search-query" placeholder="サイト内検索" />
+                </form>
+                <ul class="nav pull-right" id="loginFormWidget">
+    <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> ログイン <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li class="nav-header">.lainのIDでログイン</li>
+            <li>
+                <form action="/login" method="post" name="login-form-widget" class="form-stacked form-vertical" id="login-form-widget">
+
+<div class="control-group"><label class="control-label" for="uname">ユーザー名</label><div class="controls"><input type="text" name="uname" placeholder="ユーザー名" class="" id="uname" value=""></div></div>
+<div class="control-group"><label class="control-label" for="pass">パスワード</label><div class="controls"><input type="password" name="pass" placeholder="パスワード" id="pass" value=""></div></div>
+
+<input type="hidden" name="login_hash" value="081be43460614c131fe6f288c8833d9f">
+
+<input type="hidden" name="redirect" value="/voicedb"><div class="form-actions">
+<input type="submit" name="submit" class="btn btn-block" value="ログイン">
+</div></form>            </li>
+                        <li class="divider"></li>
+            <li><a href="/register">アカウント作成</a></li>
+            <li><a href="/user/lost-password">パスワード紛失</a></li>
+        </ul>
+            </li>
+</ul>            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="span3">
+                <nav id="main-navigation">
+        	<h2 class="menu-title">メインメニュー</h2>
+            <ul id="navigation">
+                                    <li>
+                        <a href="/" title="ホーム">ホーム</a>
+                                            </li>
+                                    <li id="navigationActive">
+                        <a href="/voicedb" title="声優データベース">声優データベース</a>
+                                                    <ul id="navigationParent">
+                                                                                                <li><a href="/voicedb/search" title="声優検索">声優検索</a></li>
+                                                                                                                                                                                                                                                                <li><a href="/voicedb/calendar/birthday" title="誕生日カレンダー">誕生日カレンダー</a></li>
+                                                                                                                                <li><a href="/voicedb/unit" title="声優ユニット">声優ユニット</a></li>
+                                                                                                                                <li><a href="/voicedb/company" title="声優プロダクション">声優プロダクション</a></li>
+                                                                                                                                <li><a href="/links/twitter/list/profile" title="声優Twitter">声優Twitter</a></li>
+                                                                                                                                <li><a href="/video/category/voice" title="声優動画">声優動画</a></li>
+                                                                                                                                <li><a href="/voicedb/trivia" title="声優トリビア">声優トリビア</a></li>
+                                                                                                                                <li><a href="/voicedb/individual/appearance" title="出演作品数検索">出演作品数検索</a></li>
+                                                                                                                                <li><a href="/voicedb/individual/costar-search" title="共演作品検索">共演作品検索</a></li>
+                                                                                                                                <li><a href="/voicedb/biography" title="声優年表">声優年表</a></li>
+                                                                                                                                <li><a href="/voicedb/individual" title="声優統計">声優統計</a></li>
+                                                                                                                                <li><a href="/voicedb/rank" title="ランキング">ランキング</a></li>
+                                                                                                                                <li><a href="/voicedb/tag" title="タグ">タグ</a></li>
+                                                                                                                                <li><a href="/voicedb/newrelease" title="ニューリリ－ス">ニューリリ－ス</a></li>
+                                                                                                                                <li><a href="/voicedb/update/waiting" title="承認待ち一覧">承認待ち一覧</a></li>
+                                                                                        </ul>
+                                            </li>
+                                    <li>
+                        <a href="/mediadb" title="アニメデータベース">アニメデータベース</a>
+                                            </li>
+                                    <li>
+                        <a href="/forum" title="フォーラム">フォーラム</a>
+                                            </li>
+                                    <li>
+                        <a href="/optical" title="声優・アニメCD">声優・アニメCD</a>
+                                            </li>
+                                    <li>
+                        <a href="/video" title="声優・アニメ動画">声優・アニメ動画</a>
+                                            </li>
+                                    <li>
+                        <a href="/place" title="プレイス">プレイス</a>
+                                            </li>
+                                    <li>
+                        <a href="/foto" title="foto">foto</a>
+                                            </li>
+                                    <li>
+                        <a href="/news" title="ニュース">ニュース</a>
+                                            </li>
+                                    <li>
+                        <a href="/links" title="リンク">リンク</a>
+                                            </li>
+                            </ul>
+        </nav>
+        <div class="center" id="sideBarAds">
+            <script type="text/javascript">
+            <!--
+            google_ad_client = "ca-pub-4473537299364066";
+            /* PCサイト_左下_メニュー下 */
+            google_ad_slot = "6509370660";
+            google_ad_width = 160;
+            google_ad_height = 600;
+            //-->
+            </script>
+            <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+        </div>
+    </div><!-- サイドメニュー終了 -->
+        <div class="span13">
+            <h1><a href="/voicedb">声優データベース</a></h1>
+
+
+<ul class="nav nav-pills">
+    <li><a href="/voicedb/search">声優検索</a></li>
+        <li><a href="/voicedb/calendar/birthday">誕生日カレンダー</a></li>
+    <li><a href="/voicedb/company">声優プロダクション</a></li>
+    <li><a href="/voicedb/individual">声優統計</a></li>
+</ul>
+
+<div id="talMenu">
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/1" title="あ行">あ行</a></div>
+    <div class="talLinkBottom">825</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/2" title="か行">か行</a></div>
+    <div class="talLinkBottom">645</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/3" title="さ行">さ行</a></div>
+    <div class="talLinkBottom">535</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/4" title="た行">た行</a></div>
+    <div class="talLinkBottom">486</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/5" title="な行">な行</a></div>
+    <div class="talLinkBottom">328</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/6" title="は行">は行</a></div>
+    <div class="talLinkBottom">472</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/7" title="ま行">ま行</a></div>
+    <div class="talLinkBottom">457</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/8" title="や行">や行</a></div>
+    <div class="talLinkBottom">274</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/9" title="ら行">ら行</a></div>
+    <div class="talLinkBottom">13</div>
+</div>
+<div class="talLink">
+    <div class="talLinkTop"><a href="/voicedb/profile/list/cid/10" title="わ行">わ行</a></div>
+    <div class="talLinkBottom">44</div>
+</div>
+</div>
+<div class="row">
+<div class="span7">
+<h2 class="topHead">最近追加/更新されたプロフィール</h2>
+<ul class="updateList">
+        	<li>
+        	<data value="2014-10-25T09:28:09+09:00">10月25日</data>
+        	<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/1558">林隆三</a>
+        	        	@
+        	        		<a href="/user/profile/kabri">
+                	                	    kabri                	        		</a>
+        	    	</li>
+        	<li>
+        	<data value="2014-10-18T02:11:20+09:00">10月18日</data>
+        	<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/3876">井野優</a>
+        	        	@
+        	        		<a href="/user/profile/nono99">
+                	                		nono99            		        		</a>
+        	    	</li>
+        	<li>
+        	<data value="2014-10-18T02:10:12+09:00">10月18日</data>
+        	<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/3873">笹井雄吾</a>
+        	        	@
+        	        		<a href="/user/profile/nono99">
+                	                		nono99            		        		</a>
+        	    	</li>
+        	<li>
+        	<data value="2014-10-18T02:08:45+09:00">10月18日</data>
+        	<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/3952">野村唯</a>
+        	        	@
+        	        		<a href="/user/profile/nono99">
+                	                		nono99            		        		</a>
+        	    	</li>
+        	<li>
+        	<data value="2014-10-18T02:07:58+09:00">10月18日</data>
+        	<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/3167">藤原勝也</a>
+        	 - プロダクションを変更        	@
+        	        		<a href="/user/profile/nono99">
+                	                		nono99            		        		</a>
+        	    	</li>
+        	<li>
+        	<data value="2014-10-18T02:06:38+09:00">10月18日</data>
+        	<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/4014">山下まみ</a>
+        	        	@
+        	        		<a href="/user/profile/nono99">
+                	                		nono99            		        		</a>
+        	    	</li>
+        	<li>
+        	<data value="2014-10-18T02:01:55+09:00">10月18日</data>
+        	<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/742">家弓家正</a>
+        	        	@
+        	        		<a href="/user/profile/nono99">
+                	                		nono99            		        		</a>
+        	    	</li>
+        	<li>
+        	<data value="2014-10-18T02:00:42+09:00">10月18日</data>
+        	<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/3418">半田雅和</a>
+        	        	@
+        	        		<a href="/user/profile/nono99">
+                	                		nono99            		        		</a>
+        	    	</li>
+        	<li>
+        	<data value="2014-10-18T02:00:05+09:00">10月18日</data>
+        	<img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/3418">半田雅和</a>
+        	        	@
+        	        		<a href="/user/profile/nono99">
+                	                		nono99            		        		</a>
+        	    	</li>
+        	<li>
+        	<data value="2014-10-18T01:59:03+09:00">10月18日</data>
+        	<img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/83">五十嵐麗</a>
+        	 - プロダクションを変更        	@
+        	        		<a href="/user/profile/nono99">
+                	                		nono99            		        		</a>
+        	    	</li>
+    </ul>
+
+<div class="btn-toolbar clearfix">
+    <div class="btn-group pull-right">
+        <a href="/voicedb/update/list" title="続きを見る" class="btn btn-mini">
+            <i class="icon-list-alt"></i> 続きを見る
+        </a>
+    </div>
+</div>
+
+
+<!-- News Scrap -->
+<h2 class="topHead">クリップ</h2>
+<article class="scrapItemBlock clearfix">
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://www.famitsu.com/news/201306/10034663.html" alt="favicon">
+	    <a href="/news/clip/link/389/" target="_blank" title="『アルカナ・ファミリア～Guida REGALO～アッシュ』に出演する岡本信彦、能登麻美子のコメントをお届け - ファミ通.com">『アルカナ・ファミリア～Guida REGALO～アッシュ』に出演する岡本信彦、能登麻美子のコメントをお届け - ファミ通.com</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年6月22日    	<a href="/news/clip/item/389/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://www.jiji.com/jc/c?g=obt_30&k=2013061300976" alt="favicon">
+	    <a href="/news/clip/link/387/" target="_blank" title="時事ドットコム：内海賢二さん死去＝アニメ声優の草分け&minus;７５歳">時事ドットコム：内海賢二さん死去＝アニメ声優の草分け&minus;７５歳</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年6月14日    	<a href="/news/clip/item/387/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://www.voiceblog.jp/atoti628/" alt="favicon">
+	    <a href="/news/clip/link/385/" target="_blank" title="重松花鳥（しげまつあとり）の声">重松花鳥（しげまつあとり）の声</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年5月18日    	<a href="/news/clip/item/385/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<div class="scrapItemBlockImage">
+		<a href="/news/clip/link/384/" target="_blank">
+			<img src="http://images.lain.gr.jp/news/517fafef75ca6.jpg" alt="「真・三國無双７」キャラソン4タイトルよりコメント第1弾！ アニソンニュース -- Newtype アニメ ミュージック ダウンロード" title="「真・三國無双７」キャラソン4タイトルよりコメント第1弾！ アニソンニュース -- Newtype アニメ ミュージック ダウンロード">
+		</a>
+	</div>
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://listen.jp/newtype/anisonnews_005262.htm" alt="favicon">
+	    <a href="/news/clip/link/384/" target="_blank" title="「真・三國無双７」キャラソン4タイトルよりコメント第1弾！ アニソンニュース -- Newtype アニメ ミュージック ダウンロード">「真・三國無双７」キャラソン4タイトルよりコメント第1弾！ アニソンニュース -- Newtype アニメ ミュージック ダウンロード</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年4月30日    	<a href="/news/clip/item/384/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://ameblo.jp/atoti628/" alt="favicon">
+	    <a href="/news/clip/link/383/" target="_blank" title="花鳥のねこねこねこハウス">花鳥のねこねこねこハウス</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年4月30日    	<a href="/news/clip/item/383/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<div class="scrapItemBlockImage">
+		<a href="/news/clip/link/382/" target="_blank">
+			<img src="http://images.lain.gr.jp/news/51710f64dbf65.jpg" alt="ナタリー - [Power Push] 坂本真綾「シンガーソングライター」インタビュー (1/3)" title="ナタリー - [Power Push] 坂本真綾「シンガーソングライター」インタビュー (1/3)">
+		</a>
+	</div>
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://natalie.mu/music/pp/maaya03" alt="favicon">
+	    <a href="/news/clip/link/382/" target="_blank" title="ナタリー - [Power Push] 坂本真綾「シンガーソングライター」インタビュー (1/3)">ナタリー - [Power Push] 坂本真綾「シンガーソングライター」インタビュー (1/3)</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年4月19日    	<a href="/news/clip/item/382/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<div class="scrapItemBlockImage">
+		<a href="/news/clip/link/381/" target="_blank">
+			<img src="http://images.lain.gr.jp/news/51710f4e4e2e8.jpg" alt="【第43回】「人気声優&times;人気イヤホン」相性が良いのは？ 怒濤の28組み合わせ総当たりテスト！ (1/10) - Phile-web" title="【第43回】「人気声優&times;人気イヤホン」相性が良いのは？ 怒濤の28組み合わせ総当たりテスト！ (1/10) - Phile-web">
+		</a>
+	</div>
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://www.phileweb.com/review/article/201304/19/795.html" alt="favicon">
+	    <a href="/news/clip/link/381/" target="_blank" title="【第43回】「人気声優&times;人気イヤホン」相性が良いのは？ 怒濤の28組み合わせ総当たりテスト！ (1/10) - Phile-web">【第43回】「人気声優&times;人気イヤホン」相性が良いのは？ 怒濤の28組み合わせ総当たりテスト！ (1/10) - Phile-web</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年4月19日    	<a href="/news/clip/item/381/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<div class="scrapItemBlockImage">
+		<a href="/news/clip/link/380/" target="_blank">
+			<img src="http://images.lain.gr.jp/news/51504f2df255b.jpg" alt="社交的な性格だったら、「声優」という仕事を選んでいなかった | 特集 | d-labo" title="社交的な性格だったら、「声優」という仕事を選んでいなかった | 特集 | d-labo">
+		</a>
+	</div>
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://www.d-laboweb.jp/special/sp72/" alt="favicon">
+	    <a href="/news/clip/link/380/" target="_blank" title="社交的な性格だったら、「声優」という仕事を選んでいなかった | 特集 | d-labo">社交的な性格だったら、「声優」という仕事を選んでいなかった | 特集 | d-labo</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年3月25日    	<a href="/news/clip/item/380/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<div class="scrapItemBlockImage">
+		<a href="/news/clip/link/379/" target="_blank">
+			<img src="http://images.lain.gr.jp/news/514ae169e54d9.jpg" alt="【レポート】田村ゆかり、スペシャルイベントをパシフィコ横浜で開催! 「17才だよ?! ゆかりちゃん祭り!!」 | ホビー | マイナビニュース" title="【レポート】田村ゆかり、スペシャルイベントをパシフィコ横浜で開催! 「17才だよ?! ゆかりちゃん祭り!!」 | ホビー | マイナビニュース">
+		</a>
+	</div>
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://news.mynavi.jp/articles/2013/03/21/tamurayukari/index.html" alt="favicon">
+	    <a href="/news/clip/link/379/" target="_blank" title="【レポート】田村ゆかり、スペシャルイベントをパシフィコ横浜で開催! 「17才だよ?! ゆかりちゃん祭り!!」 | ホビー | マイナビニュース">【レポート】田村ゆかり、スペシャルイベントをパシフィコ横浜で開催! 「17才だよ?! ゆかりちゃん祭り!!」 | ホビー | マイナビニュース</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年3月21日    	<a href="/news/clip/item/379/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<div class="scrapItemBlockImage">
+		<a href="/news/clip/link/378/" target="_blank">
+			<img src="http://images.lain.gr.jp/news/514ae1422beb8.jpg" alt="【田村ゆかり】ゆかりん17才のバースデーをみんなでお祝い！パシフィコ横浜公演をリポート。 &laquo;  Kawaii girl Japan" title="【田村ゆかり】ゆかりん17才のバースデーをみんなでお祝い！パシフィコ横浜公演をリポート。 &laquo;  Kawaii girl Japan">
+		</a>
+	</div>
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://www.kawaii-girl.jp/feature/36748" alt="favicon">
+	    <a href="/news/clip/link/378/" target="_blank" title="【田村ゆかり】ゆかりん17才のバースデーをみんなでお祝い！パシフィコ横浜公演をリポート。 &laquo;  Kawaii girl Japan">【田村ゆかり】ゆかりん17才のバースデーをみんなでお祝い！パシフィコ横浜公演をリポート。 &laquo;  Kawaii girl Japan</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年3月21日    	<a href="/news/clip/item/378/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<div class="scrapItemBlockImage">
+		<a href="/news/clip/link/377/" target="_blank">
+			<img src="http://images.lain.gr.jp/news/5124bd1bddd58.jpg" alt="ナタリー - [Power Push] 悠木碧「メリバ」インタビュー with 新居昭乃 (1/5)" title="ナタリー - [Power Push] 悠木碧「メリバ」インタビュー with 新居昭乃 (1/5)">
+		</a>
+	</div>
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://natalie.mu/music/pp/yukiaoi" alt="favicon">
+	    <a href="/news/clip/link/377/" target="_blank" title="ナタリー - [Power Push] 悠木碧「メリバ」インタビュー with 新居昭乃 (1/5)">ナタリー - [Power Push] 悠木碧「メリバ」インタビュー with 新居昭乃 (1/5)</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年2月20日    	<a href="/news/clip/item/377/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<div class="scrapItemBlockImage">
+		<a href="/news/clip/link/375/" target="_blank">
+			<img src="http://images.lain.gr.jp/news/5124bcaded4bc.jpg" alt="ナタリー - [Power Push] 花澤香菜 1stフルアルバム「claire」特集 (1/6)" title="ナタリー - [Power Push] 花澤香菜 1stフルアルバム「claire」特集 (1/6)">
+		</a>
+	</div>
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://natalie.mu/music/pp/hanazawakana" alt="favicon">
+	    <a href="/news/clip/link/375/" target="_blank" title="ナタリー - [Power Push] 花澤香菜 1stフルアルバム「claire」特集 (1/6)">ナタリー - [Power Push] 花澤香菜 1stフルアルバム「claire」特集 (1/6)</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年2月20日    	<a href="/news/clip/item/375/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<div class="scrapItemBlockImage">
+		<a href="/news/clip/link/374/" target="_blank">
+			<img src="http://images.lain.gr.jp/news/5114e55b65902.jpg" alt="【インタビュー】平野文&amp;古川登志夫が語る『うる星やつら』の世界 - デジタルリマスターHD版がキッズステーションで宇宙初放送! (1) 『うる星やつら』がデジタルリマスターHD版に! | ホビー | マイナビニュース" title="【インタビュー】平野文&amp;古川登志夫が語る『うる星やつら』の世界 - デジタルリマスターHD版がキッズステーションで宇宙初放送! (1) 『うる星やつら』がデジタルリマスターHD版に! | ホビー | マイナビニュース">
+		</a>
+	</div>
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://news.mynavi.jp/articles/2013/02/01/urusei/index.html" alt="favicon">
+	    <a href="/news/clip/link/374/" target="_blank" title="【インタビュー】平野文&amp;古川登志夫が語る『うる星やつら』の世界 - デジタルリマスターHD版がキッズステーションで宇宙初放送! (1) 『うる星やつら』がデジタルリマスターHD版に! | ホビー | マイナビニュース">【インタビュー】平野文&amp;古川登志夫が語る『うる星やつら』の世界 - デジタルリマスターHD版がキッズステーションで宇宙初放送! (1) 『うる星やつら』がデジタルリマスターHD版に! | ホビー | マイナビニュース</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2013年2月08日    	<a href="/news/clip/item/374/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<div class="scrapItemBlockImage">
+		<a href="/news/clip/link/372/" target="_blank">
+			<img src="http://images.lain.gr.jp/news/50d57a7b5eaa8.jpg" alt="井上喜久子さんが出演した、声優生電話第12回レポート！  - ニュース - アニメイトTV" title="井上喜久子さんが出演した、声優生電話第12回レポート！  - ニュース - アニメイトTV">
+		</a>
+	</div>
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://www.animate.tv/news/details.php?id=1355190477&p=1" alt="favicon">
+	    <a href="/news/clip/link/372/" target="_blank" title="井上喜久子さんが出演した、声優生電話第12回レポート！  - ニュース - アニメイトTV">井上喜久子さんが出演した、声優生電話第12回レポート！  - ニュース - アニメイトTV</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2012年12月22日    	<a href="/news/clip/item/372/">詳細</a>
+	</p>
+	</div>
+</article>
+<article class="scrapItemBlock clearfix">
+		<div class="scrapItemBlockImage">
+		<a href="/news/clip/link/371/" target="_blank">
+			<img src="http://images.lain.gr.jp/news/50d45076d7c2f.jpg" alt="大みそかに『ヱヴァ新劇場版』を一挙上映！アスカ役・宮村優子による「あんたバカぁ?」イベント生中継も - シネマトゥデイ" title="大みそかに『ヱヴァ新劇場版』を一挙上映！アスカ役・宮村優子による「あんたバカぁ?」イベント生中継も - シネマトゥデイ">
+		</a>
+	</div>
+		<h2>
+		<img src="http://favicon.hatena.ne.jp/?url=http://www.cinematoday.jp/page/N0048876" alt="favicon">
+	    <a href="/news/clip/link/371/" target="_blank" title="大みそかに『ヱヴァ新劇場版』を一挙上映！アスカ役・宮村優子による「あんたバカぁ?」イベント生中継も - シネマトゥデイ">大みそかに『ヱヴァ新劇場版』を一挙上映！アスカ役・宮村優子による「あんたバカぁ?」イベント生中継も - シネマトゥデイ</a>
+	</h2>
+	<div class="scrapItemSummary">
+	<p class="scrapItemInfo txtRight">
+	    2012年12月21日    	<a href="/news/clip/item/371/">詳細</a>
+	</p>
+	</div>
+</article>
+
+<!-- 声優新規CD -->
+<h2 class="topHead"><a href="/optical/list">CDリリース</a></h2>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1222">
+                <img src="http://images-jp.amazon.com/images/P/B00BBT1N5A.09._PC_SS50_.jpg" width="50" height="50" alt="日笠陽子 Collaboration Album (初回限定盤)" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_1.gif" width="13" height="12" alt="アルバム" title="アルバム" />
+            <a href="/optical/item/1222"><cite>日笠陽子 Collaboration Album (初回限定盤)</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/2292" class="contributor">日笠陽子</a>、<br />
+            リリース日: 2013年07月17日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1243">
+                <img src="http://images-jp.amazon.com/images/P/B00BN4UQ3S.09._PC_SS50_.jpg" width="50" height="50" alt="Grow Slowly(初回限定盤)" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_2.gif" width="13" height="12" alt="マキシシングル" title="マキシシングル" />
+            <a href="/optical/item/1243"><cite>Grow Slowly(初回限定盤)</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/1077" class="contributor">井口裕香</a>、<br />
+            リリース日: 2013年05月15日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1237">
+                <img src="http://images-jp.amazon.com/images/P/B00BJ76TAS.09._PC_SS50_.jpg" width="50" height="50" alt="Preserved Roses(初回生産限定盤)(DVD付)" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_2.gif" width="13" height="12" alt="マキシシングル" title="マキシシングル" />
+            <a href="/optical/item/1237"><cite>Preserved Roses(初回生産限定盤)(DVD付)</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/28" class="contributor">水樹奈々</a>、<br />
+            リリース日: 2013年05月15日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1240">
+                <img src="http://images-jp.amazon.com/images/P/B00BHJGQFG.09._PC_SS50_.jpg" width="50" height="50" alt="Baby Sweet Berry Love(DVD付)" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_2.gif" width="13" height="12" alt="マキシシングル" title="マキシシングル" />
+            <a href="/optical/item/1240"><cite>Baby Sweet Berry Love(DVD付)</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/2680" class="contributor">小倉唯</a>、<br />
+            リリース日: 2013年05月08日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1226">
+                <img src="http://images-jp.amazon.com/images/P/B00BBSSMR8.09._PC_SS50_.jpg" width="50" height="50" alt="美しき残酷な世界 (初回限定盤)" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_2.gif" width="13" height="12" alt="マキシシングル" title="マキシシングル" />
+            <a href="/optical/item/1226"><cite>美しき残酷な世界 (初回限定盤)</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/2292" class="contributor">日笠陽子</a>、<br />
+            リリース日: 2013年05月08日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1238">
+                <img src="http://images-jp.amazon.com/images/P/B00BHC0OHE.09._PC_SS50_.jpg" width="50" height="50" alt="GENESIS ARIA(初回生産限定)" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_2.gif" width="13" height="12" alt="マキシシングル" title="マキシシングル" />
+            <a href="/optical/item/1238"><cite>GENESIS ARIA(初回生産限定)</cite></a><br />
+            、<a href="/voicedb/unit/view/90">スフィア</a><br />
+            リリース日: 2013年05月01日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1236">
+                <img src="http://images-jp.amazon.com/images/P/.09._PC_SS50_.jpg" width="50" height="50" alt="滅び去る宵闇のトランシルヴァニア" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_5.gif" width="13" height="12" alt="キャラクターソング アルバム" title="キャラクターソング アルバム" />
+            <a href="/optical/item/1236"><cite>滅び去る宵闇のトランシルヴァニア</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/461" class="contributor">能登麻美子</a>、<br />
+            リリース日: 2013年04月29日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1242">
+                <img src="http://images-jp.amazon.com/images/P/B00BEZSJZI.09._PC_SS50_.jpg" width="50" height="50" alt="この世界は僕らを待っていた" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_2.gif" width="13" height="12" alt="マキシシングル" title="マキシシングル" />
+            <a href="/optical/item/1242"><cite>この世界は僕らを待っていた</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/1208" class="contributor">茅原実里</a>、<br />
+            リリース日: 2013年04月24日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1241">
+                <img src="http://images-jp.amazon.com/images/P/B00BHJGQD8.09._PC_SS50_.jpg" width="50" height="50" alt="七つの海よりキミの海【初回限定盤】" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_2.gif" width="13" height="12" alt="マキシシングル" title="マキシシングル" />
+            <a href="/optical/item/1241"><cite>七つの海よりキミの海【初回限定盤】</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/2784" class="contributor">上坂すみれ</a>、<br />
+            リリース日: 2013年04月24日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1239">
+                <img src="http://images-jp.amazon.com/images/P/B00B2PH30M.09._PC_SS50_.jpg" width="50" height="50" alt="Fantastic future" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_2.gif" width="13" height="12" alt="マキシシングル" title="マキシシングル" />
+            <a href="/optical/item/1239"><cite>Fantastic future</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/3" class="contributor">田村ゆかり</a>、<br />
+            リリース日: 2013年04月17日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1223">
+                <img src="http://images-jp.amazon.com/images/P/B00B4G1ZUI.09._PC_SS50_.jpg" width="50" height="50" alt="relation(初回生産限定盤)(DVD付)" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_1.gif" width="13" height="12" alt="アルバム" title="アルバム" />
+            <a href="/optical/item/1223"><cite>relation(初回生産限定盤)(DVD付)</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/1907" class="contributor">高垣彩陽</a>、<br />
+            リリース日: 2013年04月17日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1244">
+                <img src="http://images-jp.amazon.com/images/P/B00B2PH2Q2.09._PC_SS50_.jpg" width="50" height="50" alt="カノン" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_2.gif" width="13" height="12" alt="マキシシングル" title="マキシシングル" />
+            <a href="/optical/item/1244"><cite>カノン</cite></a><br />
+            <img src="/images/sex2.png" width="12" height="9" alt="男性" /> <a href="/voicedb/profile/399" class="contributor">宮野真守</a>、<br />
+            リリース日: 2013年04月10日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1228">
+                <img src="http://images-jp.amazon.com/images/P/B00B5OMY5O.09._PC_SS50_.jpg" width="50" height="50" alt="apple symphony [スペシャル盤]" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_1.gif" width="13" height="12" alt="アルバム" title="アルバム" />
+            <a href="/optical/item/1228"><cite>apple symphony [スペシャル盤]</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/2473" class="contributor">竹達彩奈</a>、<br />
+            リリース日: 2013年04月10日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1220">
+                <img src="http://images-jp.amazon.com/images/P/B00AV4U99W.09._PC_SS50_.jpg" width="50" height="50" alt="シンガーソングライター【初回限定盤】" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_1.gif" width="13" height="12" alt="アルバム" title="アルバム" />
+            <a href="/optical/item/1220"><cite>シンガーソングライター【初回限定盤】</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/15" class="contributor">坂本真綾</a>、<br />
+            リリース日: 2013年03月27日        </div>
+    </div>
+    <div class="newDisc roundBox clearfix">
+        <div class="newDiscImage">
+            <a href="/optical/item/1219">
+                <img src="http://images-jp.amazon.com/images/P/B00AAKVW2U.09._PC_SS50_.jpg" width="50" height="50" alt="claire" />
+            </a>
+        </div>
+        <div class="newDiscDetail">
+            <img src="/images/voicedb/disc_1.gif" width="13" height="12" alt="アルバム" title="アルバム" />
+            <a href="/optical/item/1219"><cite>claire</cite></a><br />
+            <img src="/images/sex1.png" width="12" height="9" alt="女性" /> <a href="/voicedb/profile/1869" class="contributor">花澤香菜</a>、<br />
+            リリース日: 2013年02月20日        </div>
+    </div>
+
+<div class="btn-toolbar clearfix">
+    <div class="btn-group pull-right">
+        <a href="/optical/list" title="続きを見る" class="btn btn-mini">
+            <i class="icon-list-alt"></i> 続きを見る
+        </a>
+    </div>
+</div>
+</div>
+    <div class="span6">
+        <h2 class="topHead serchItemsHead">声優検索</h2>
+        <form action="/voicedb/search" method="get" name="searchItems" class="form-inline" id="searchItems"><label><input name="q" maxlength="80" placeholder="声優名で検索" type="text" value=""></label> 
+<input type="submit" name="searchVoiceSubmit" class="btn btn-primary" value="検索">
+
+</form>        <h2 class="topHead"><a href="/voicedb/calendar/birthday">10月26日 生まれの声優さん</a></h2>
+        <ul id="birthdayList">
+                    <li>
+                <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/54">おみむらまゆこ</a>
+                 - 1976年生まれ 38歳            </li>
+                    <li>
+                <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/822">小西寛子</a>
+                 - 1975年生まれ 39歳            </li>
+                    <li>
+                <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/1088">塩田朋子</a>
+                 - 1961年生まれ 53歳            </li>
+                    <li>
+                <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/2220">安田早希</a>
+                            </li>
+                    <li>
+                <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/2615">西川真美</a>
+                            </li>
+                    <li>
+                <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/3777">茶乃</a>
+                            </li>
+                    <li>
+                <img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/1881">徳山靖彦</a>
+                            </li>
+                    <li>
+                <img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/2158">金子由之</a>
+                 - 1961年生まれ 53歳            </li>
+                    <li>
+                <img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/2342">松尾大亮</a>
+                 - 1979年生まれ 35歳            </li>
+                </ul>
+        
+        <!-- 声優Twitter -->
+        <h2 class="topHead"><a href="/links/twitter/list/profile">声優Twitter</a></h2>
+
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/mikakokomatsu" target="_blank"><img src="http://pbs.twimg.com/profile_images/520579127904989184/L05kwpP5_normal.jpeg" class="twtrBlockProfile" alt="小松未可子" title="小松未可子" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/mikakokomatsu" target="_blank">mikakokomatsu</a>
+            マリコレ参加された皆さん、楽しんで頂けましたか？残念ながら今回参加出来なかったのですが、ビデオメッセージと、それからfour-tune!!メンバーに思いをを託しました…！！りえしょん、ワイフ、みほぽんお疲れ様！そしてありがとう！11/5,Latimer road発売。<br />
+            15分前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/2720">小松未可子</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/atsuko_bewe" target="_blank"><img src="http://pbs.twimg.com/profile_images/467242355372744705/0xnvr8l7_normal.jpeg" class="twtrBlockProfile" alt="榎本温子" title="榎本温子" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/atsuko_bewe" target="_blank">atsuko_bewe</a>
+            @<a class="username" href="https://twitter.com/phelicia_mouel" rel="external" target="_blank">phelicia_mouel</a> あー。(笑)<br />
+            31分前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/8">榎本温子</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/rasico" target="_blank"><img src="http://pbs.twimg.com/profile_images/523995536500592640/5LkUHe49_normal.jpeg" class="twtrBlockProfile" alt="五十嵐浩子" title="五十嵐浩子" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/rasico" target="_blank">rasico</a>
+            RT @<a class="username" href="https://twitter.com/ogoshi_054" rel="external" target="_blank">ogoshi_054</a>: 10月25日発売の月間モデルグラフィックス12月号のろうがんず杯のレポートに、作品のお写真を掲載していただいております。レポートページ、そしてGirlsページ（ @<a class="username" href="https://twitter.com/MGforgirls" rel="external" target="_blank">MGforgirls</a>  ）でもご紹介いただいております。うれしい！ http://…<br />
+            35分前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/2733">五十嵐浩子</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/Sai1199" target="_blank"><img src="http://pbs.twimg.com/profile_images/508249674331877377/q1ylag2q_normal.jpeg" class="twtrBlockProfile" alt="中田沙奈枝" title="中田沙奈枝" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/Sai1199" target="_blank">Sai1199</a>
+            RT @<a class="username" href="https://twitter.com/ayukohaiena" rel="external" target="_blank">ayukohaiena</a>: 今日は健の登場ですよ！お気に入りの回です！<br />
+ぜひアニメ観てくださいー！(⌒▽⌒) <a class="url" href="http://t.co/dj0Jr7TxFR" rel="external" target="_blank">http://t.co/dj0Jr7TxFR</a><br />
+            41分前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/4002">中田沙奈枝</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/sachiouji" target="_blank"><img src="http://pbs.twimg.com/profile_images/378800000072380815/eb35595d4b6c1e6c4d7511446d53b3c8_normal.jpeg" class="twtrBlockProfile" alt="松本さち" title="松本さち" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/sachiouji" target="_blank">sachiouji</a>
+            @<a class="username" href="https://twitter.com/komina_love" rel="external" target="_blank">komina_love</a> 良かった♪やっぱり夜が綺麗だったよ(*^_^*)<br />
+            約1時間前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/421">松本さち</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/ayanon_y" target="_blank"><img src="http://pbs.twimg.com/profile_images/432791477391863809/vfZmLFzo_normal.jpeg" class="twtrBlockProfile" alt="山本彩乃" title="山本彩乃" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/ayanon_y" target="_blank">ayanon_y</a>
+            RT @<a class="username" href="https://twitter.com/seisyunnsai" rel="external" target="_blank">seisyunnsai</a>: 【青駿祭】<br />
+ 11月２日 <br />
+小林ゆうさん、いとうかなこさん、山本彩乃さんのトークショーを開催します！ 皆さん奮ってご参加ください！ <br />
+事前整理券　nitidairikou.geinou@gmail.com（10/30締切） <br />
+※抽選の場合は当選…<br />
+            約1時間前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/2701">山本彩乃</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/osorasan703" target="_blank"><img src="http://pbs.twimg.com/profile_images/512980592078516226/_mXlTKvO_normal.jpeg" class="twtrBlockProfile" alt="大空直美" title="大空直美" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/osorasan703" target="_blank">osorasan703</a>
+            ごはん食べよーー！<br />
+めっちゃ動いたからお肉食べちゃうぞ！！自分へのご褒美だ！\(//・∇・//)\<br />
+            約1時間前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/3012">大空直美</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/okanokousuke" target="_blank"><img src="http://pbs.twimg.com/profile_images/516930896406933504/15fEc5w5_normal.jpeg" class="twtrBlockProfile" alt="岡野浩介" title="岡野浩介" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/okanokousuke" target="_blank">okanokousuke</a>
+            @<a class="username" href="https://twitter.com/annatuki" rel="external" target="_blank">annatuki</a> もしかしてバンビですか？<br />
+            約1時間前 <img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/97">岡野浩介</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/koubouya" target="_blank"><img src="http://pbs.twimg.com/profile_images/888551637/k_n-chu0507_normal.jpg" class="twtrBlockProfile" alt="津久井教生" title="津久井教生" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/koubouya" target="_blank">koubouya</a>
+            RT @<a class="username" href="https://twitter.com/k_a_n_a_" rel="external" target="_blank">k_a_n_a_</a>: 【明日】落語だけやないでぇ～☆彡「チーム志ら乃ライブ一日目」開演１９：００／新宿レフカダ／立川志ら乃・ホシカワ・ふくべえりこ・華激家かな乃ん（華名）／木戸銭・前売り２０００円当日２３００円／１００分間のショータイム。 <a class="url" href="http://t.co/eTA1" rel="external" target="_blank">http://t.co/eTA1</a>…<br />
+            約1時間前 <img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/629">津久井教生</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/oranje_omi" target="_blank"><img src="http://pbs.twimg.com/profile_images/503046107845259264/MrLfYbNB_normal.jpeg" class="twtrBlockProfile" alt="南央美" title="南央美" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/oranje_omi" target="_blank">oranje_omi</a>
+            帰り際の空はなんか幻想的でした。<br />
+みんなみんな今日も明日も良い日でありますように～(*^▽^*) <a class="url" href="http://t.co/D9QgPqMdO3" rel="external" target="_blank">http://t.co/D9QgPqMdO3</a><br />
+            約1時間前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/27">南央美</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/enojunjunjun" target="_blank"><img src="http://pbs.twimg.com/profile_images/3462007774/572b0fea41362636211468952197c85c_normal.jpeg" class="twtrBlockProfile" alt="榎木淳弥" title="榎木淳弥" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/enojunjunjun" target="_blank">enojunjunjun</a>
+            RT @<a class="username" href="https://twitter.com/onoyuki19840622" rel="external" target="_blank">onoyuki19840622</a>: 【小野友樹ソロライブ情報】突然ですが！「小野友樹 1st LIVE in 11.30  ～イイ三十路へのプレリュード～」を、11月30日(日)、新宿BLAZEにて開催予定です！1年以上準備して、ようやくこのタイミングでのお知らせ…！感慨…<br />
+            約1時間前 <img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/3440">榎木淳弥</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/fumiyakosugi" target="_blank"><img src="http://pbs.twimg.com/profile_images/413609323802017792/Ffc3pAAD_normal.jpeg" class="twtrBlockProfile" alt="小杉史哉" title="小杉史哉" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/fumiyakosugi" target="_blank">fumiyakosugi</a>
+            〆はおじや <a class="url" href="http://t.co/x6Kbo7CLaE" rel="external" target="_blank">http://t.co/x6Kbo7CLaE</a><br />
+            約1時間前 <img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/3824">小杉史哉</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/yasuspiegel" target="_blank"><img src="http://pbs.twimg.com/profile_images/505231713631338498/kMIoBAlD_normal.jpeg" class="twtrBlockProfile" alt="冨田泰代" title="冨田泰代" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/yasuspiegel" target="_blank">yasuspiegel</a>
+            あ゛あ゛ーーーー！！！<br />
+<br />
+負けたーーーー！！！<br />
+            約1時間前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/3506">冨田泰代</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/TOSHIO_FURUKAWA" target="_blank"><img src="http://pbs.twimg.com/profile_images/459664056220000257/Gbo4kl5d_normal.jpeg" class="twtrBlockProfile" alt="古川登志夫" title="古川登志夫" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/TOSHIO_FURUKAWA" target="_blank">TOSHIO_FURUKAWA</a>
+            @<a class="username" href="https://twitter.com/fumico_hiwa" rel="external" target="_blank">fumico_hiwa</a> ありがとうございます。白餡が好きで^_^<br />
+            約1時間前 <img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/603">古川登志夫</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/Ma_ri_ya_i" target="_blank"><img src="http://pbs.twimg.com/profile_images/520960902623801344/JTwJz0Ve_normal.jpeg" class="twtrBlockProfile" alt="伊瀬茉莉也" title="伊瀬茉莉也" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/Ma_ri_ya_i" target="_blank">Ma_ri_ya_i</a>
+            RT @<a class="username" href="https://twitter.com/animax_voice" rel="external" target="_blank">animax_voice</a>: 本日もボイススイッチをご視聴くださりありがとうございました！<br />
+<br />
+今後のゲストは<br />
+11/2,9→福山潤さん<br />
+11/16,23→南條愛乃さん<br />
+11/30,12/7→浪川大輔さん<br />
+12/14,21→伊瀬茉莉也さんです！<br />
+お楽しみに！ http://…<br />
+            約1時間前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/1830">伊瀬茉莉也</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/inkarose77" target="_blank"><img src="http://pbs.twimg.com/profile_images/519569945114316801/Hq2c4Nov_normal.jpeg" class="twtrBlockProfile" alt="瀧本富士子" title="瀧本富士子" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/inkarose77" target="_blank">inkarose77</a>
+            @<a class="username" href="https://twitter.com/koyonagumo" rel="external" target="_blank">koyonagumo</a> ありがとう(*^-^*)<br />
+            約1時間前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/704">瀧本富士子</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/trombe_boss" target="_blank"><img src="http://pbs.twimg.com/profile_images/508834727059406848/e2yuHuL4_normal.jpeg" class="twtrBlockProfile" alt="稲田徹" title="稲田徹" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/trombe_boss" target="_blank">trombe_boss</a>
+            RT @<a class="username" href="https://twitter.com/shinsan77" rel="external" target="_blank">shinsan77</a>: ひとり昨日の余韻に浸りながら…<br />
+Open！！<br />
+してます(^^)<br />
+戦隊っていいーーーーねっ！！<br />
+            約1時間前 <img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/191">稲田徹</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/ono_kensho" target="_blank"><img src="http://pbs.twimg.com/profile_images/518452900205309953/7yvDTeIa_normal.jpeg" class="twtrBlockProfile" alt="小野賢章" title="小野賢章" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/ono_kensho" target="_blank">ono_kensho</a>
+            ヨビコー！！<br />
+<br />
+千秋楽無事に終わりました！<br />
+ありがとうございました！！！<br />
+燃え尽きたー(´･_･`) <a class="url" href="http://t.co/PqHmBLvupb" rel="external" target="_blank">http://t.co/PqHmBLvupb</a><br />
+            約1時間前 <img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/1187">小野賢章</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/suzu_honey" target="_blank"><img src="http://pbs.twimg.com/profile_images/525641065617838081/wVSVSXfR_normal.jpeg" class="twtrBlockProfile" alt="富樫美鈴" title="富樫美鈴" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/suzu_honey" target="_blank">suzu_honey</a>
+            バイオ観よーっと♪<br />
+            約1時間前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/2581">富樫美鈴</a>
+        </div>
+    </div>
+    <div class="twtrBlock roundBox clearfix">
+        <a href="https://twitter.com/yuki_yoshinari" target="_blank"><img src="http://pbs.twimg.com/profile_images/525610992449765378/UoS5xwZT_normal.jpeg" class="twtrBlockProfile" alt="吉成由貴" title="吉成由貴" width="48" height="48" /></a> 
+        <div class="twtrBlockDetail">
+            <a href="https://twitter.com/yuki_yoshinari" target="_blank">yuki_yoshinari</a>
+            @<a class="username" href="https://twitter.com/atamancrea" rel="external" target="_blank">atamancrea</a> ふふふ、どうでしょう(*´艸`)<br />
+            約1時間前 <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/3900">吉成由貴</a>
+        </div>
+    </div>
+
+<div class="btn-toolbar clearfix">
+    <div class="btn-group pull-right">
+        <a href="/links/twitter/list/profile" title="続きを見る" class="btn btn-mini">
+            <i class="icon-list-alt"></i> 続きを見る
+        </a>
+    </div>
+</div>        <!-- 声優新規ブログ -->
+        <h2 class="topHead"><a href="/voicedb/blog">声優ブログ</a> <a href="http://feeds.feedburner.com/lain-voiceblog" target="_blank"> <i class="icon-rss-sign" title="Feed"></i></a></h2>
+    <div class="blogBlock">
+        <div class="blogBlockTitle"><a href="http://yaplog.jp/marunojin/archive/1107" target="_blank" class="blogTitle">10月26日 - 別所線ライブイベント☆</a></div>
+        <span class="blogBlockFooter"><a href="http://yaplog.jp/marunojin/" target="_blank">□より〇　〜〇の陣本営。〜</a>
+        <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/861">真田アサミ</a></span>
+    </div>
+    <div class="blogBlock">
+        <div class="blogBlockTitle"><a href="http://yaplog.jp/heavenly_cafe/archive/1386" target="_blank" class="blogTitle">10月26日 - 歩いたーー！！</a></div>
+        <span class="blogBlockFooter"><a href="http://yaplog.jp/heavenly_cafe/" target="_blank">原 由実の☆heavenly cafe☆</a>
+        <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/2505">原由実</a></span>
+    </div>
+    <div class="blogBlock">
+        <div class="blogBlockTitle"><a href="http://yaplog.jp/isocchi/archive/2546" target="_blank" class="blogTitle">10月26日 - カレーです、カレー</a></div>
+        <span class="blogBlockFooter"><a href="http://yaplog.jp/isocchi/" target="_blank">+ イソッチ　クロニクル +</a>
+        <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/2488">磯村知美</a></span>
+    </div>
+    <div class="blogBlock">
+        <div class="blogBlockTitle"><a href="http://yaplog.jp/minorunrunba/archive/1596" target="_blank" class="blogTitle">10月26日 - 『Ｋ』初参戦</a></div>
+        <span class="blogBlockFooter"><a href="http://yaplog.jp/minorunrunba/" target="_blank">白石稔の『白石玩具　弐号店』</a>
+        <img src="/images/voicedb/2.png" alt="男性" title="男性" width="12" height="9"  /> <a href="/voicedb/profile/983">白石稔</a></span>
+    </div>
+    <div class="blogBlock">
+        <div class="blogBlockTitle"><a href="http://tsunematsuayumi.blog59.fc2.com/blog-entry-2373.html" target="_blank" class="blogTitle">10月26日 - 土曜日のおはたまキャラバン!!</a></div>
+        <span class="blogBlockFooter"><a href="http://tsunematsuayumi.blog59.fc2.com/" target="_blank"> Ａｅｏｌｉａｎ　Ｓｏｕｎｄ</a>
+        <img src="/images/voicedb/1.png" alt="女性" title="女性" width="12" height="9"  /> <a href="/voicedb/profile/1517">恒松あゆみ</a></span>
+    </div>
+
+<div class="btn-toolbar clearfix">
+    <div class="btn-group pull-right">
+        <a href="/voicedb/blog" title="続きを見る" class="btn btn-mini">
+            <i class="icon-list-alt"></i> 続きを見る
+        </a>
+    </div>
+</div>    </div>
+
+</div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 1997 - 2014 .lain <a href="/">ホーム</a> - <a href="/contact">お問い合わせ</a> - <a href="/about">.lainについて</a> - <a href="/docs/api">api</a></p>
+    </footer>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/jquery/jquery-1.9.0.min.js"><\/script>')</script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var _gaq=[['_setAccount','UA-54052-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+    window.___gcfg = {lang: 'ja'};
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+</body>
+</html>

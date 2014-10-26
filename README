@@ -1,0 +1,6 @@
+声優データベースをスクレイピング
+===
+
+声優データベースからデータを抜いてcsvにします. 
+http://lain.gr.jp/voicedb/profile/list/cid/1
+
