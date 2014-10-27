@@ -2,7 +2,7 @@
 
 [ -f "res.txt" ] && rm res.txt
 
-for profile in `cat ./va_link.txt`
+for profile in `cat ./va_link.txt `
 do
   curl $profile | 
   grep -A 6 "名前" |  
