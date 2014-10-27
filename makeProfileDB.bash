@@ -1,4 +1,6 @@
-﻿#!/bin/bash
+#!/bin/bash
+
+[ -f "res.txt" ] && rm res.txt
 
 for profile in `cat ./va_link.txt`
 do
