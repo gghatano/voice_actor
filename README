@@ -11,6 +11,10 @@ http://lain.gr.jp/voicedb/profile/list/cid/1
 
 プロフィールページへのリンクリスト.txtを作りました. 
 
+result以下に全部あります. 
+
+項目の抽出はやりました ./makeProfileDB.bash >> ./res.txt
+
 ## 内容
 
 - va_list.txt 

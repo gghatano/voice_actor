@@ -1,1 +1,0 @@
-	<dt>名前</dt><dd>大河 望</dd>	<dt>よみ</dt><dd>たいが のぞむ</dd>	<dt>ローマ字</dt><dd>Taiga Nozomu</dd>					<dt>誕生日</dt><dd>1973年1月7日</dd>			<dt>年齢</dt>	<dd>41歳</dd>	<dt>出身地</dt><dd>埼玉県</dd>				<dt>血液型</dt><dd>A型</dd>	<dt>星座</dt><dd>やぎ座</dd>	<dt>所属</dt>	<dd><a href="/place/item/1" title="フリー">	フリー</a>	</dd>							<dt>詳細</dt><dd>元アーツビジョン、キャロットハウス所属</dd></dl>
