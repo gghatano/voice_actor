@@ -10,6 +10,8 @@ http://lain.gr.jp/voicedb/profile/list/cid/1
 ## 進捗
 名前;variable;value という形でデータを作りました
 
+所属事務所データテーブル作りたい
+
 ## 内容
 
 - va_list.txt 
@@ -22,8 +24,12 @@ http://lain.gr.jp/voicedb/profile/list/cid/1
 - ./makeProfileDB.bash 
   プロフィールを作ります. 
 
-- res.txt 
-  集計結果です
+- va_data.txt 
+  集計結果です. 
+
+- va_twitter.txt 
+  名前とTwitterアカウント対応
+
 
 ## 雑感
 

@@ -1,0 +1,43 @@
+データの内容確認
+===
+
+声優さんのデータを作りました. 
+```{r}
+library(data.table)
+library(dplyr)
+library(pipeR)
+```
+
+## 内容確認
+```{r}
+dat = fread("va_data.txt", sep=";", header=FALSE)
+dat %>% setnames(c("id", "variable", "value" ))
+
+```
+誕生日の分布調べます
+
+```{r}
+library(openair)
+va_birthday = fread("va_birthday_data.txt", header=FALSE)
+va_birthday_summarised = va_birthday %>% 
+  mutate(date= as.Date(V1, format="%m-%d")) %>% 
+  select(date, V2)
+va_birthday_summarised %>% setnames(c("date", "birthday"))
+## カレンダープロット
+calendarPlot(mydata=va_birthday_summarised, pollutant = "birthday", year = 2014)
+
+```
+
+## Twitterのデータフレームとマージ
+```{r}
+va_name = fread("va_name.txt", header=FALSE) %>% setnames("NAME")
+va_name %>% dim
+
+va_twitter = fread("va_twitter.txt", header=FALSE) %>% setnames(c("NAME", "TWITTER"))
+va_twitter %>% dim
+
+merge(va_name, va_twitter, by="NAME") %>% dim
+```
+
+
+

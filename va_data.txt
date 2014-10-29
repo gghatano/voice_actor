@@ -17859,7 +17859,6 @@ ALLAN SCHINTU;HEIGHT;175cm
 鳥羽 月子;HEIGHT;154cm
 鳥羽 月子;BLOOD;A型
 鳥羽 月子;STAR;いて座
-鳥羽 月子;AIR AGENCY所属(~2013年6月)
 長尾 歩;NAME;長尾 歩
 長尾 歩;YOMI;ながお あゆみ
 長尾 歩;ROME;Nagao Ayumi

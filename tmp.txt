@@ -1,7 +1,0 @@
-NAME;岸田 今日子
-YOMI;きしだ きょうこ
-ROME;Kishida Kyouko
-BIRTHDAY;1930年4月29日
-PLACE;東京都
-BLOOD;A型
-STAR;おうし座
